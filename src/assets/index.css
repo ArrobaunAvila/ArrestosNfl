@@ -1,0 +1,17 @@
+.btn-Dcomic{
+  border: 5px;
+  background-color:darkseagreen;
+  color: black;
+  }
+  .container-footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .container-footer >  h2 , a {
+   display: block;
+   position: relative;
+   text-align: center;
+  }

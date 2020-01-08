@@ -1,0 +1,44 @@
+<h2>Añadir marca</h2>
+<input type="text" [(ngModel)]="since" (blur)="onBlur()">
+<button (click)="saveSince()">Añadir Since</button>
+<p [ngStyle]="{'color':'red' ,'font-family':'Comic Sans', 'font-size':'19px'}"> {{since}}</p>
+
+<h2>League : {{arrayObjectHeroes[0].squadName}} - From {{arrayObjectHeroes[0].since}}<h2>
+<li [ngStyle]="{'font-size': '16px'}" *ngFor="let data of arrayObjectHeroes[0].members; let indice = index ">
+ {{data.name}}
+  <span *ngIf="data.age > 50" [style.background]="data.age > 50 ? 'black' : 'green'"
+    [style.color] = "data.age > 50 ? 'white' : 'black'"> - SUPER HERO OLD! </span>
+<button (click)="deleteSuperHero(indice)" [class.btn-Dcomic]= "data.publisher =='DC Comics'"> Borrar SuperHero</button>
+</li>
+
+<p>Nombres de Super Heroes Con poderes</p>
+<ul>
+    <li *ngFor="let data of namesHeroes" [ngStyle]="{'font-size': '16px'}">{{data}}</li>
+</ul>
+<p>Tipos de Squad super Heroes</p>
+<div  class="squad" [ngSwitch]="squadName">
+<li *ngSwitchCase="'league_justice'">
+  <p [ngStyle]="{'font-size': '16px'}">Squad league the justice</p>
+</li>
+<li *ngSwitchCase="'titans'">
+    <p [ngStyle]="{'font-size': '16px'}">Squad titans</p>
+</li>
+<li *ngSwitchCase="'others'">
+    <p [ngStyle]="{'font-size': '16px'}">Combination of squads super heroes</p>
+</li>
+<li *ngSwitchCase="'avengers'">
+  <p [ngStyle]="{'font-size': '16px'}">Squad Avengers</p>
+</li>
+  </div>
+<select>
+  <option *ngFor="let i of months" value='{{i}}'>{{i}}</option>
+</select>
+
+<div>
+    <span *ngIf="validator; then condition1 else condition2">validator valid</span>
+   <ng-template #condition1> validator is valid </ng-template>
+   <ng-template #condition2> validator is invalid</ng-template>
+</div>
+
+
+
