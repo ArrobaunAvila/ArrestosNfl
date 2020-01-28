@@ -3,7 +3,7 @@
 <button (click)="saveSince()">Añadir Since</button>
 <p [ngStyle]="{'color':'red' ,'font-family':'Comic Sans', 'font-size':'19px'}"> {{since}}</p>
 
-<h2>League : {{arrayObjectHeroes[0].squadName}} - From {{arrayObjectHeroes[0].since}}<h2>
+<h2>League : {{arrayObjectHeroes[0].squadName}} - From {{arrayObjectHeroes[0].formed}}<h2>
 <li [ngStyle]="{'font-size': '16px'}" *ngFor="let data of arrayObjectHeroes[0].members; let indice = index ">
  {{data.name}}
   <span *ngIf="data.age > 50" [style.background]="data.age > 50 ? 'black' : 'green'"

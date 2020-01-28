@@ -1,0 +1,26 @@
+<button (click)='loadMenuHeroes()'>Ir a Menu Heroes</button>
+<h3>Top Heroes</h3>
+<h2 *ngIf="nombreHeroe">Buscando resultados... Heroe: {{nombreHeroe}}</h2>
+<div class="grid grid-pad">
+  <!--<a *ngFor="let data of arrayObjectHeroes[0].members; let indice = index " class="col-1-4">-->
+    <a *ngFor="let data of namesHeroes" class="col-1-4">
+    <div class="module hero">
+      <h4>{{data}}</h4>
+    </div>
+  </a>
+</div>
+
+<div *ngIf="identificado; then siIdentificado else noIdentificado"></div>
+
+<ng-template #siIdentificado>
+  <p>Estas indentificado en la aplicacion.</p>
+  <button (click)='unsetIdentificacion()'>Borrar Identificacion</button>
+</ng-template>
+
+<ng-template #noIdentificado>
+  <p>No estas identificado. Pulsa este boton para identificarte</p>
+  <button (click)='Inidentificate()'>Identificate</button>
+</ng-template>
+
+
+

@@ -1,4 +1,4 @@
-export let SuperHeroes =  {
+export let superHeroes =  {
         squadName: 'others',
         homeTown: 'Metro City',
         formed: 2016,

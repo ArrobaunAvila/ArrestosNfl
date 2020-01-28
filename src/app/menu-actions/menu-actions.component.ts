@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SuperHeroes } from '../moviesXdata/superHeroes';
+import { superHeroes } from '../moviesXdata/superHeroes';
 import { Heroes } from '../moviesXdata/heroes';
 
 @Component({
@@ -19,9 +19,9 @@ export class MenuActionsComponent implements OnInit {
     this.months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
       'August', 'September', 'October', 'November', 'December'];
     this.namesHeroes = new Array();
-    this.squadName = SuperHeroes.squadName;
+    this.squadName = superHeroes.squadName;
     this.arrayObjectHeroes = [
-     new Heroes(SuperHeroes.secretBase, SuperHeroes.formed, SuperHeroes.homeTown, SuperHeroes.members)
+     new Heroes(superHeroes.secretBase, superHeroes.formed, superHeroes.homeTown, superHeroes.members)
    ];
     this.getNames();
   }
@@ -42,6 +42,7 @@ export class MenuActionsComponent implements OnInit {
     Object.assign(this.arrayObjectHeroes[0] , {since : this.since});
     console.log(this.arrayObjectHeroes[0]);
   }
+
 
   public deleteSuperHero(indice: string) {
     /*Formas de borrar un elemento de un array [delete and splice]*/

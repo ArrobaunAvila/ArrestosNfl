@@ -7,7 +7,6 @@ import { Component, OnDestroy } from '@angular/core';
 export class AppComponent implements OnDestroy {
   public title = 'Welcome To ArrestosNfl';
   public verifyComponet: boolean;
-
   constructor() {
   console.log('Se ejecuta constructor AppComponent');
   }
